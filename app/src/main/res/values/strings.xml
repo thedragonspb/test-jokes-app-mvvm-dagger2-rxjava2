@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TestJokesApp</string>
+    <string name="title_categories">Categories</string>
+    <string name="title_joke">Joke</string>
+    <string name="loading_error">Loading error:\n%s</string>
+    <string name="repeat">Repeat</string>
+    <string name="joke_with_category">%s\n(Category: %s)</string>
+    <string name="one_more_joke">One more joke</string>
+    <string name="select_category">Select jokes category:</string>
+    <string name="search">Search jokes</string>
+</resources>

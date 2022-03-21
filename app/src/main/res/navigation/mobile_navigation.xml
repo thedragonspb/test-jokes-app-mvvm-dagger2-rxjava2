@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/navigation_categories">
+
+    <fragment
+        android:id="@+id/navigation_categories"
+        android:name="thedragonspb.testjokesapp.categories.ui.CategoriesFragment"
+        android:label="@string/title_categories"
+        tools:layout="@layout/fragment_categories">
+
+        <action
+            android:id="@+id/to_joke_fragment"
+            app:destination="@id/navigation_joke"/>
+        <action
+            android:id="@+id/to_searchFragment"
+            app:destination="@id/searchFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_joke"
+        android:name="thedragonspb.testjokesapp.joke.ui.JokeFragment"
+        android:label="@string/title_joke"
+        tools:layout="@layout/fragment_joke">
+
+        <argument
+            android:name="category"
+            app:argType="thedragonspb.testjokesapp.categories.domain.model.Category" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="thedragonspb.testjokesapp.search.ui.SearchFragment"
+        android:label="search_fragment"
+        tools:layout="@layout/search_fragment" />
+
+</navigation>
