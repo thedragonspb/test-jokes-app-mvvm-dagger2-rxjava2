@@ -107,7 +107,7 @@ class SearchFragment : Fragment() {
             .distinctUntilChanged()
             .subscribeOn(AndroidSchedulers.mainThread())
             .observeOn(Schedulers.io())
-            .switchMap { searchText ->
+            .switchMapSingle { searchText ->
                 viewModel.search(searchText)
             }
             .observeOn(AndroidSchedulers.mainThread())
